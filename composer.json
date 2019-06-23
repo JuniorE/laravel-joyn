@@ -1,0 +1,54 @@
+{
+    "name": "juniore/laravel-joyn",
+    "description": "Joyn integration for laravel",
+    "keywords": [
+        "juniore",
+        "laravel-joyn"
+    ],
+    "homepage": "https://github.com/juniore/laravel-joyn",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Jan Junior Everaert",
+            "email": "janjunior.everaert@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JuniorE\\LaravelJoyn\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JuniorE\\LaravelJoyn\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JuniorE\\LaravelJoyn\\LaravelJoynServiceProvider"
+            ],
+            "aliases": {
+                "LaravelJoyn": "JuniorE\\LaravelJoyn\\LaravelJoynFacade"
+            }
+        }
+    }
+}
